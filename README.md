@@ -1,72 +1,80 @@
-# [RSBot](https://sdclowen.github.io/RSBot)
+# RSBot
 
-Free, open source Silkroad Online bot for everyone to use!
-
-Feel free to edit the code, create pull requests for any and all improvements, create issues and request features. [Supported clients](#supported-clients) that are listed below are a result of prolonged community work, do not hesitate to accompany us!
-
-To join the conversation, get recent updates/announcements, join our [Discord server](https://discord.gg/MuY5ejEU3r).
-
-[![GitHub Issues](https://img.shields.io/github/issues/sdclowen/rsbot?label=Open%20Issues)](https://github.com/sdclowen/rsbot/issues)
-[![downloads](https://img.shields.io/github/downloads/SDClowen/RSBot/total?label=Total%20Downloads)](https://github.com/SDClowen/RSBot/releases)
-[![downloads-latest](https://img.shields.io/github/downloads/SDClowen/RSBot/latest/total?label=Latest%20release)](https://github.com/SDClowen/RSBot/releases/latest)
-
-[![GitHub Repo](https://img.shields.io/badge/GitHub-SDClowen/RSBot-green?style=social)](https://github.com/SDClowen/RSBot)
+[![GitHub Issues](https://img.shields.io/github/issues/myildirimofficial/rsbot?label=Open%20Issues)](https://github.com/sdclowen/rsbot/issues)
+[![downloads](https://img.shields.io/github/downloads/myildirimofficial/RSBot/total?label=Total%20Downloads)](https://github.com/SDClowen/RSBot/releases)
 [![Discord](https://img.shields.io/discord/454345032846016515?label=Discord%20Server)](https://discord.gg/rmd96aus9A)
+![GitHub Repo stars](https://img.shields.io/github/stars/myildirimofficial/rsbot)
+[![release-latest](https://img.shields.io/github/v/release/SDClowen/RSBot?label=Latest%20Stable)](https://github.com/SDClowen/RSBot/releases/latest)
+[![docs](https://img.shields.io/badge/RSBot-Docs-FF00FF)](https://sdclowen.github.io/RSBot)
+ 
+Free, open-source, and highly extensible Silkroad Online botting framework written in C\#. RSBot provides a lightweight clientless/client-attached environment designed for both regular users and developers who want to build custom automation modules.
 
-[![Coffee](https://img.shields.io/badge/Donate_@_Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/sdclowen)
+Feel free to explore the codebase, create pull requests for improvements, or open issues for feature requests and bug reports.
 
-| Links                                                                                                                                                                    |                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
-| [![release-latest](https://img.shields.io/github/v/release/SDClowen/RSBot?label=Latest%20Stable&style=for-the-badge)](https://github.com/SDClowen/RSBot/releases/latest) | Latest stable release                      |
-| [![release-all](https://img.shields.io/badge/Latest%20Release-Nightly-FF0000?style=for-the-badge)](https://github.com/SDClowen/RSBot/releases)                           | Nightly releases for most recent features  |
-| [![release-manager](https://img.shields.io/badge/Latest%20Release-Manager-00DD00?style=for-the-badge)](https://github.com/warofmine/Rsbot-Manager/releases/latest)       | Manager for multiple bot profiles          |
-| [![docs](https://img.shields.io/badge/RSBot-Docs-FF00FF?style=for-the-badge)](https://sdclowen.github.io/RSBot)                                                          | Documentation, tips & tricks and tutorials |
+## ✨ Key Features
 
-## Building the project
+  * **Advanced Pathfinding:**(Coming Soon) Implements efficient NavMesh-based navigation for accurate coordinate translation and smooth movement without getting stuck.
+  * **Packet-Driven Architecture:** Fast, lightweight, and capable of handling complex game packets directly.
+  * **Plugin System:** Highly modular design. Write your own C\#, VB.NET, F#, C++/CLR plugins to extend functionality without touching the core engine.
+  * **Multi-Client Management:** Seamlessly manage multiple character profiles and configurations.
+  * **Comprehensive Client Support:** Supports major global and regional clients (iSRO, TRSRO, vSRO, and various private servers).
 
-- Clone the repository with the command `git clone --recursive https://github.com/SDClowen/RSBot.git`)
+## 🚀 Getting Started
 
-### Visual Studio
+### For Users
 
-- Open the project in [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/) (Required workloads are `.NET desktop development` and `Desktop development with C++`)
-- Build the project (<kbd>Ctrl+Shift+B</kbd>)
-- Run the compiled executable from `Build\RSBot.exe`
+1.  Download the latest stable executable from the [Releases](https://github.com/myildirimofficial/RSBot/releases/latest) page.
+2.  Check the [Documentation & Guides](https://myildirimofficial.github.io/RSBot) to set up your first bot profile.
 
-### Other
+### For Developers (Building from Source)
 
-Run the commands below (You still need MSBuild tooling via Visual Studio):
+**Prerequisites:**
 
-- `dotnet restore`
-- `powershell -ExecutionPolicy Bypass .\build.ps1`
+  * [Visual Studio 2026](https://visualstudio.microsoft.com/downloads/)
+  * Workloads: `.NET desktop development`
 
-## Supported clients
+**Build Instructions:**
 
-| Region          | Version                       |
-| :-------------- | :---------------------------- |
-| Chinese         | ICCGame                       |
-| Chinese Old     | cSRO/-R                       |
-| Global          | iSRO (International Silkroad) |
-| Japanese        | JSRO                          |
-| Japanese Old    | JSRO_SL                       |
-| Korean          | KSRO                          |
-| Rigid           | iSRO 2015                     |
-| Russia          | RuSro                         |
-| Taiwan          | Digeam                        |
-| Taiwan Old      | TSRO 110                      |
-| Thailand        | Blackrogue 100                |
-| Thailand        | Blackrogue 110                |
-| Turkey          | TRSRO                         |
-| Vietnam         | vSRO 188                      |
-| Vietnam         | vSRO 193                      |
-| Vietnam         | vSRO 274                      |
-| Vietnam         | VTC Game                      |
-| ~~Chinese Old~~ | ~~MHTC~~                      |
-| ~~Japanese-R~~  |                               |
+1.  Clone the repository along with its submodules:
+    ```bash
+    git clone --recursive https://github.com/SDClowen/RSBot.git
+    ```
+2.  Open the solution in Visual Studio and build (`Ctrl+Shift+B`), **OR** build via command line:
+    ```powershell
+    dotnet restore
+    powershell -ExecutionPolicy Bypass .\build.ps1
+    ```
+3.  The compiled binaries will be located in the `Build\` directory.
 
-## Project info
+## 🌍 Supported Regions & Versions
 
-![Language](https://img.shields.io/badge/language-CSharp-blue)
-[![GitHub License](https://img.shields.io/badge/License-GPLv3-blue)](https://github.com/SDClowen/RSBot/blob/master/LICENSE)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSDClowen%2FRSBot.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSDClowen%2FRSBot?ref=badge_shield)
+The list below represents the collective effort of our community. If your client is not listed, you can help us map the opcodes\!
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSDClowen%2FRSBot.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSDClowen%2FRSBot?ref=badge_large)
+| Region | Client Version |
+| :--- | :--- |
+| **Global** | iSRO (International), Rigid (iSRO 2015) |
+| **Turkey** | TRSRO |
+| **Chinese** | ICCGame, cSRO/-R |
+| **Japanese** | JSRO, JSRO\_SL |
+| **Korean** | KSRO |
+| **Vietnam** | vSRO 188, vSRO 193, vSRO 274, VTC Game |
+| **Taiwan** | Digeam, TSRO 110 |
+| **Other** | RuSro, Blackrogue 100/110 |
+
+## 🤝 Community & Contributions
+
+RSBot thrives on community contributions. Whether it's updating opcodes for a new game update, fixing a NavMesh routing issue, or writing a new plugin, your help is welcome\!
+
+  * Join the [Discord server](https://discord.gg/rmd96aus9A) for development discussions and support.
+  * Check the [Open Issues](https://github.com/myildirimofficial/rsbot/issues) if you want to find something to work on.
+  * Support the maintainer by buying a coffee:<br>
+    [![Coffee](https://img.shields.io/badge/Donate_@_Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/sdclowen)
+    ![GitHub Sponsors](https://img.shields.io/github/sponsors/myildirimofficial?style=for-the-badge)
+
+
+
+## ⚖️ License
+
+RSBot is licensed under the **GPLv3 License**. See the `LICENSE` file for more details.
+
+[](https://app.fossa.com/projects/git%2Bgithub.com%2Fmyildirimofficial%2FRSBot?ref=badge_large)
